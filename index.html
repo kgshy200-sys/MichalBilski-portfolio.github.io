@@ -1,0 +1,184 @@
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Michała</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #181818;
+      color: #f3f3f3;
+    }
+    header {
+      text-align: center;
+      padding: 60px 20px 30px 20px;
+      background: linear-gradient(135deg, #4a90e2 0%, #262262 100%);
+    }
+    header h1 {
+      margin: 0 0 10px 0;
+      font-size: 42px;
+      letter-spacing: 2px;
+    }
+    header p {
+      margin: 0;
+      color: #d9edff;
+      font-size: 18px;
+    }
+    nav {
+      background: #222;
+      padding: 12px 0;
+      text-align: center;
+    }
+    nav a {
+      color: #a8c5ea;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      transition: color 0.2s;
+    }
+    nav a:hover {
+      color: #fff;
+    }
+    main {
+      max-width: 1100px;
+      margin: 30px auto 0 auto;
+      padding: 20px;
+    }
+    section {
+      margin-bottom: 40px;
+    }
+    h2 {
+      color: #4a90e2;
+      font-size: 30px;
+      margin-bottom: 15px;
+      border-left: 8px solid #4a90e2;
+      padding-left: 15px;
+    }
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 24px;
+    }
+    .project {
+      background: #24243e;
+      border-radius: 12px;
+      padding: 22px;
+      box-shadow: 0 4px 12px #0003;
+      transition: transform 0.15s;
+      min-height: 190px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .project:hover {
+      transform: translateY(-5px) scale(1.03);
+    }
+    .project h3 {
+      margin-top: 0;
+      color: #8cd0ff;
+    }
+    .project p {
+      margin-bottom: 7px;
+      color: #ddd;
+    }
+    .project-links {
+      margin-top: 9px;
+    }
+    .project a {
+      color: #73e2a7;
+      text-decoration: underline;
+      font-size: 15px;
+      margin-right: 14px;
+    }
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .skill {
+      background: #353570;
+      color: #fff;
+      border-radius: 20px;
+      padding: 8px 16px;
+      font-size: 16px;
+      letter-spacing: 1px;
+      box-shadow: 0 2px 6px #0002;
+    }
+    .contact {
+      background: #1c2340;
+      border-radius: 14px;
+      padding: 25px;
+      color: #fff;
+    }
+    .contact ul {
+      padding-left: 18px;
+    }
+    @media (max-width: 600px) {
+      header h1 { font-size: 28px; }
+      h2 { font-size: 22px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Michał – Portfolio Programisty</h1>
+    <p>Cześć! Nazywam się Michał. Tworzę nowoczesne aplikacje, strony internetowe oraz prostrze landing page. Staram się dopasować do potrzeb klienta i stworzyć stronę wspólnie z nim .</p>
+  </header>
+  <nav>
+    <a href="#projekty">Projekty</a>
+    <a href="#umiejetnosci">Umiejętności</a>
+    <a href="#kontakt">Kontakt</a>
+  </nav>
+  <main>
+    <section id="projekty">
+      <h2>Moje Projekty</h2>
+      <div class="projects">
+        <div class="project">
+          <h3>TaskFlow - Zarządzanie Zadaniami</h3>
+          <p>Webowa aplikacja do organizacji zadań z funkcjami drag & drop, listami użytkowników i powiadomieniami.</p>
+          <div class="project-links">
+            <a href="Webaplikacja.html" target="_blank">Zobacz</a>
+          </div>
+        </div>
+        <div class="project">
+          <h3>Lista przepisów</h3>
+          <p>Strona wyświetlająca listę przepisów, dodanych przez ciebie.</p>
+          <div class="project-links">
+            <a href="projekt.html" target="_blank">Zobacz</a>
+          </div>
+        </div>
+        <div class="project">
+          <h3>Portfolio Michała</h3>
+          <p>Moje własne portfolio wykonane w czystym HTML, CSS i JavaScript. Prosty i elegancki landing page.</p>
+          <div class="project-links">
+            <a href="#" style="color:#fff; cursor:default; text-decoration:none; pointer-events:none;">Jesteś tutaj!</a>
+            <a href="https://github.com/twojgithub/portfolio" target="_blank">Zobacz kod</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="umiejetnosci">
+      <h2>Umiejętności</h2>
+      <div class="skills">
+        <div class="skill">JavaScript</div>
+        <div class="skill">HTML5/CSS3</div>
+        <div class="skill">Python</div>
+       </div>
+    </section>
+    <section id="kontakt">
+      <h2>Kontakt</h2>
+      <div class="contact">
+        <ul>
+          <li>Email: <a href="mailto:kgshy200@gmail.com" style="color:#a8eaff;">kgshy200@gmail.com</a></li>
+       </ul>
+        <p>Z chęcią odpowiem na Twoją wiadomość. Zapraszam do współpracy!</p>
+      </div>
+    </section>
+  </main>
+  <footer style="text-align:center; padding:22px; color: #777; background: #181818">
+    © Michał 2024 — Portfolio Programisty
+  </footer>
+</body>
