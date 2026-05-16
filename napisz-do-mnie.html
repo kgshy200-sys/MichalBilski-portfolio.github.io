@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Napisz do mnie — KGSHY.dev</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="navbar">
+        <a href="index.html" class="navbar-logo">KGSHY.dev</a>
+        <nav>
+          <ul>
+            <li><a href="index.html">Strona główna</a></li>
+            <li><a href="projekty.html">Projekty</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+            <li><a href="napisz-do-mnie.html" class="active">Napisz do mnie</a></li>
+            <li>
+              <a
+                href="https://www.facebook.com/profile.php?id=61570677020871"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="cta-btn cta-btn--facebook"
+                >Facebook</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="page-single">
+      <section class="section">
+        <h1 class="section-title">Napisz do mnie</h1>
+        <p class="page-intro">
+          Wypełnij formularz — wiadomość trafi bezpośrednio na mój adres e-mail. Odpowiadam zwykle w
+          ciągu 8–48 godzin.
+        </p>
+
+        <form
+          class="contact-form"
+          action="https://formsubmit.co/kgshy200@gmail.com"
+          method="POST"
+        >
+          <input type="hidden" name="_subject" value="Nowa wiadomość z formularza KGSHY.dev" />
+          <input type="hidden" name="_template" value="table" />
+          <input type="hidden" name="_captcha" value="true" />
+          <input type="hidden" name="_next" value="dziekujemy.html" />
+          <input type="text" name="_honey" style="display: none" tabindex="-1" autocomplete="off" />
+
+          <div class="form-row">
+            <label for="name">Imię i nazwisko</label>
+            <input type="text" id="name" name="name" required placeholder="Jan Kowalski" />
+          </div>
+
+          <div class="form-row">
+            <label for="email">Twój e-mail</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              placeholder="twoj@email.pl"
+            />
+          </div>
+
+          <div class="form-row">
+            <label for="subject">Temat</label>
+            <input
+              type="text"
+              id="subject"
+              name="subject"
+              required
+              placeholder="Zapytanie o projekt strony"
+            />
+          </div>
+
+          <div class="form-row">
+            <label for="message">Wiadomość</label>
+            <textarea
+              id="message"
+              name="message"
+              required
+              placeholder="Opisz krótko swój projekt lub pytanie..."
+            ></textarea>
+          </div>
+
+          <p class="form-hint">
+            Klikając „Wyślij”, akceptujesz przetworzenie danych w celu odpowiedzi na wiadomość.
+          </p>
+
+          <button type="submit" class="cta-btn form-submit">Wyślij wiadomość</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      © 2026 KGSHY.dev &mdash; Designed & coded by
+      <b style="color:var(--color-secondary);font-weight:700;">Michał Bilski</b>
+    </footer>
+  </body>
+</html>
