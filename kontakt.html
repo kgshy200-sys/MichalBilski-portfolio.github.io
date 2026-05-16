@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Kontakt — KGSHY.dev</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="navbar">
+        <a href="index.html" class="navbar-logo">KGSHY.dev</a>
+        <nav>
+          <ul>
+            <li><a href="index.html">Strona główna</a></li>
+            <li><a href="projekty.html">Projekty</a></li>
+            <li><a href="kontakt.html" class="active">Kontakt</a></li>
+            <li>
+              <a
+                href="https://www.facebook.com/profile.php?id=61570677020871"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="cta-btn cta-btn--facebook"
+                >Facebook</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="page-single">
+      <section class="section">
+        <h1 class="section-title">Kontakt</h1>
+        <p class="page-intro">Masz pytania lub chcesz omówić projekt? Napisz — odpowiem najszybciej jak to możliwe.</p>
+        <div class="contact-section">
+          <ul class="contact-list">
+            <li>
+              <span class="contact-label">Email:</span>
+              <a href="mailto:kgshy200@gmail.com" class="contact-link">kgshy200@gmail.com</a>
+            </li>
+            <li>
+              <span class="contact-label">Facebook:</span>
+              <a
+                href="https://www.facebook.com/profile.php?id=61570677020871"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="contact-link"
+                >facebook.com/profile</a
+              >
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">FAQ</h2>
+        <div class="faq">
+          <div class="faq-item">
+            <div class="faq-q" onclick="toggleFaq(0)">
+              Jak wygląda proces współpracy?
+              <svg width="18" height="18" fill="none">
+                <path
+                  d="M5 7l4 4 4-4"
+                  stroke="#1d4ed8"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </div>
+            <div class="faq-a">
+              Najpierw poznaję Twój projekt i cele, następnie przygotowuję ofertę oraz design.
+              Praca odbywa się iteracyjnie — Ty decydujesz na każdym etapie.
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q" onclick="toggleFaq(1)">
+              Czy wykonujesz integracje z zewnętrznymi usługami?
+              <svg width="18" height="18" fill="none">
+                <path
+                  d="M5 7l4 4 4-4"
+                  stroke="#1d4ed8"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </div>
+            <div class="faq-a">
+              Tak, mam doświadczenie z API (Stripe, Auth0, CRM, ERP) oraz integracjami
+              backend/frontend.
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q" onclick="toggleFaq(2)">
+              W jakich technologiach pracujesz?
+              <svg width="18" height="18" fill="none">
+                <path
+                  d="M5 7l4 4 4-4"
+                  stroke="#1d4ed8"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </div>
+            <div class="faq-a">
+              Specjalizuję się w React, Next.js, Tailwind, Node.js, TypeScript oraz dbam o design w
+              Figma.
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q" onclick="toggleFaq(3)">
+              Ile to kosztuje?
+              <svg width="18" height="18" fill="none">
+                <path
+                  d="M5 7l4 4 4-4"
+                  stroke="#1d4ed8"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </div>
+            <div class="faq-a">
+              Cena zależy od zakresu projektu, poziomu złożoności oraz wymagań. Każdą wycenę
+              przygotowuję indywidualnie po zapoznaniu się z Twoimi potrzebami. Skontaktuj się, aby
+              uzyskać darmową wycenę!
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      © 2026 KGSHY.dev &mdash; Designed & coded by
+      <b style="color:var(--color-secondary);font-weight:700;">Michał Bilski</b>
+    </footer>
+
+    <script>
+      function toggleFaq(idx) {
+        const qs = document.querySelectorAll('.faq-q');
+        const as = document.querySelectorAll('.faq-a');
+        qs.forEach((q, i) => {
+          q.classList.toggle('active', i === idx && !as[i].classList.contains('open'));
+        });
+        as.forEach((a, i) => {
+          if (i === idx) {
+            a.classList.toggle('open');
+            if (a.classList.contains('open')) a.style.maxHeight = '170px';
+            else a.style.maxHeight = null;
+          } else {
+            a.classList.remove('open');
+            qs[i].classList.remove('active');
+            a.style.maxHeight = null;
+          }
+        });
+      }
+
+      document.querySelectorAll('.faq-q').forEach((el, i) => {
+        el.setAttribute('tabindex', '0');
+        el.onkeydown = (e) => {
+          if (e.key === 'Enter' || e.key === ' ') toggleFaq(i);
+        };
+      });
+    </script>
+  </body>
+</html>
